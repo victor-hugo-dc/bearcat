@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-header {
+    background-color: #ffffff; /* Header background color */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow under the header */
+}
+
+nav {
+    padding: 10px 20px; /* Padding inside the navigation */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* Centering items horizontally */
+}
+
+.nav-list li {
+  /* flex: 1; */ /* Remove this line to center items */
+  text-align: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* Dropdown background color */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Dropdown shadow */
+    list-style: none;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu li:hover {
+    background-color: #f0f0f0; /* Hover background color */
+}
+
+section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+#cashtag {
+    display: inline-block;
+    position: relative;
+    padding: 0px 15px;
+    border: 2px solid black;
+    color: red;
+    transform: rotate(358deg);
+    -webkit-transform: rotate(358deg);
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+.heading {
+    max-width: 75%;
+    text-align: center;
+    margin: auto;
+    font-size: large;
+    font-weight: 400;
+}
+
+.clipboard {
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.address {
+    text-align: center;
+}
+
+.address-section {
+    margin-top: 5em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.terminal-container, .ways-to-buy {
+    width: 50%;
+}
+
+.buy-container {
+    display: flex;
+}
+
+.button-list {
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.button-list li {
+    text-align: center;
+}
+
+.button-list li button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff; /* Default background color */
+    color: #000000; /* Default text color */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-list li button:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
