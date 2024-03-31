@@ -88,6 +88,64 @@
             </div>
         </section>
 
+        <section>
+            <div id="carousel" class="carousel">
+                <div class="slide active">
+                    <img src="images/aliBEAR.png" alt="Ali">
+                </div>
+                <div class="slide">
+                    <img src="images/blacked.png" alt="Blacked">
+                </div>
+                <div class="slide">
+                    <img src="images/sweeneybearcat.png" alt="Sweeney">
+                </div>
+                <div class="slide">
+                    <img src="images/sweeneykissbearcat.png" alt="SweeneyKiss">
+                </div>
+                <div class="slide">
+                    <img src="images/tigerbearcat.png" alt="Tiger">
+                </div>
+            
+                <div class="indicators">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>                   
+        </section>
+        <script>
+            let slideIndex = 0;
+            showSlides(slideIndex);
+            let slideInterval = setInterval(function() { moveSlide(1); }, 5000); // Change slide every 3 seconds
+        
+            function showSlides(n) {
+                let slides = document.getElementsByClassName("slide");
+                let dots = document.getElementsByClassName("dot");
+                if (n >= slides.length) slideIndex = 0;
+                if (n < 0) slideIndex = slides.length - 1;
+                
+                Array.from(slides).forEach(slide => slide.style.display = "none");
+                Array.from(dots).forEach(dot => dot.className = dot.className.replace(" active", ""));
+                
+                slides[slideIndex].style.display = "block";
+                dots[slideIndex].className += " active";
+            }
+        
+            function moveSlide(n) {
+                clearInterval(slideInterval);
+                showSlides(slideIndex += n);
+                slideInterval = setInterval(function() { moveSlide(1); }, 3000);
+            }
+        
+            function currentSlide(n) {
+                clearInterval(slideInterval);
+                showSlides(slideIndex = n);
+                slideInterval = setInterval(function() { moveSlide(1); }, 3000);
+            }
+        </script>
+
         <section id="buy-section">
             <h1>How to Buy</h1>
             <div class="buy-container">
