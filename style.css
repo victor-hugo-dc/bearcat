@@ -1,21 +1,29 @@
+:root {
+    --navbackground: #36393F;
+    --background: #222831;
+    --section: #393E46;
+    --textcolor: white;
+}
+
 body {
     margin: 0;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background: antiquewhite;
+    background: var(--background);
+    color: var(--textcolor);
 }
 
 #buy-section {
     padding-top: 5em;
-    background: bisque;
+    background: var(--section);
     padding-bottom: 5em;    
 }
 
 .nav-header {
-    background-color: #ffffff; /* Header background color */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow under the header */
+    background-color: var(--background); /* Header background color */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1); /* Shadow under the header */
     position: static;
 }
 
@@ -78,7 +86,7 @@ section {
     display: inline-block;
     position: relative;
     padding: 0px 15px;
-    border: 2px solid black;
+    border: 2px solid var(--textcolor);
     color: red;
     transform: rotate(358deg);
     -webkit-transform: rotate(358deg);
@@ -111,7 +119,7 @@ h1, h2, h3, h4 {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--textcolor);
 }
 
 .img-container {
@@ -190,4 +198,62 @@ a {
 #integrated-terminal {
     display: inline-block;
     margin-left: 10em;
+}
+
+.clipboard {
+    position: relative;
+}
+
+.clipboard:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 60px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 1s ease-in-out;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+}
+
+.clipboard:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        font-size: 10px;
+    }
+
+    .nav-list li {
+        padding: 10px 15px;
+    }
+
+    .buy-container {
+        display: block;
+    }
+
+    .terminal-container {
+        width: 100%;
+    }
+
+    #integrated-terminal {
+        margin-left: 0;
+    }
+
+    .button-list {
+        width: 100%;
+    }
 }
