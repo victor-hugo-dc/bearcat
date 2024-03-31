@@ -51,6 +51,24 @@ nav {
     position: relative;
 }
 
+.link-section {
+    text-align: center;
+    margin: auto;
+    width: 100%; /* Adjust based on your layout needs */
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Centers the list in the section */
+}
+
+.link-list li {
+    display: inline; /* Display list items side by side */
+    margin: 0 10px; /* Add some spacing between items */
+}
+
 .dropdown .dropdown-menu {
     display: none;
     position: absolute;
