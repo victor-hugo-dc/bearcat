@@ -232,6 +232,8 @@ a {
     max-width: 600px; /* Your desired max width */
     height: 400px; /* Your desired height */
     overflow: hidden;
+    margin: auto !important;
+
   }
   
   .slide {
