@@ -69,7 +69,7 @@ nav {
 }
 
 .link-list li {
-    margin: 0 10px; /* Space out the list items */
+    margin: 0 50px; /* Space out the list items */
 }
 
 .dropdown .dropdown-menu {
