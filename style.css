@@ -328,4 +328,15 @@ a {
     .button-list {
         width: 100%;
     }
+
+    #dextools-widget {
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #dextools-widget {
+        width: 50em;
+        height: 25em;
+    }
 }
