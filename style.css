@@ -296,6 +296,9 @@ a {
     background-color: #717171;
   }
 
+.chart-container {
+    text-align: center;
+}
 
 @media screen and (max-width: 768px) {
     body {
