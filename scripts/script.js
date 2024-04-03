@@ -1,52 +1,3 @@
-/*const upload = document.getElementById('image-upload');
-
-let image;
-let container;
-
-Promise.all([
-    faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-    faceapi.nets.ssdMobilenetv1.loadFromUri('/models')
-]).then(process_image);
-
-async function process_image() {
-    container = document.getElementById('hat-image-container');
-    container.style.position = 'relative';
-
-    upload.addEventListener('change', async () => {
-        if (image) image.remove();
-        
-        image = await faceapi.bufferToImage(upload.files[0]);
-        container.innerHTML = ''; // Clear container before appending new elements
-        container.appendChild(image);
-        
-        // Calculate width relative to the container's width
-        const containerWidth = container.clientWidth;
-        image.style.width = '100%'; // Set image width to 100% of container width
-
-        const landmarks1 = await faceapi.detectFaceLandmarks(image);
-        const detections = await faceapi.detectAllFaces(image).withFaceLandmarks().withFaceDescriptors();
-
-        detections.forEach(detection => {
-            const box = detection.detection.box;
-            const faceBox = document.createElement('div');
-            faceBox.className = 'face-box';
-            faceBox.style.position = 'absolute';
-            faceBox.style.top = `${box.y}px`;
-            faceBox.style.left = `${box.x}px`;
-            faceBox.style.width = `${box.width}px`;
-            faceBox.style.height = `${box.height}px`;
-            container.appendChild(faceBox);
-        });
-
-        // Adjust image size whenever window size changes
-        window.addEventListener('resize', () => {
-            const rect = image.getBoundingClientRect();
-            image.style.width = `${rect.width}px`;
-        });
-    });
-}*/
-
 const upload = document.getElementById('image-upload');
         let image;
         let container;
@@ -82,14 +33,6 @@ const upload = document.getElementById('image-upload');
                 detections.forEach(detection => {
                     const box = detection.detection.box;
                     const faceBox = document.createElement('div');
-                    /*faceBox.className = 'face-box';
-                    faceBox.style.position = 'absolute';
-                    faceBox.style.top = `${box.y}px`;
-                    faceBox.style.left = `${box.x}px`;
-                    faceBox.style.width = `${box.width}px`;
-                    faceBox.style.height = `${box.height}px`;
-                    container.appendChild(faceBox);*/
-
                     // Overlay hat image on each face
                     const hatWidth = box.width * 1.5; // Adjust hat size as needed
                     const hatHeight = hatWidth * (hatImage.height / hatImage.width);
