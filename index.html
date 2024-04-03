@@ -35,6 +35,8 @@
 
             gtag('config', 'G-8QG0VEMELH');
         </script>
+        <script defer src="scripts/face-api.min.js"></script>
+        <script defer src="scripts/script.js"></script>
     </head>
     <body>
         <header class="nav-header">
@@ -214,7 +216,23 @@
                     <p>A: Safer than a bear in hibernation and as agile as a cat chasing a laser pointer!</p>
                 </div>
             </div>
-       </section>
+            <!--<input type="file" accept="image/*" id="imageUpload">
+            <div id="edited-image-container"></div>-->
+
+        </section>
+
+        <section id="bearcathat-section">
+            <h1>Bear Cat Hat Generator</h1>
+            <div class="image-input">
+                <input id="image-upload" type="file" accept="image/*">
+                <label for="image-upload" class="custom-file-upload">
+                    Choose Image
+                </label>
+            </div>
+            <div id="hat-image-container">
+                <canvas id="hat-image"></canvas>
+            </div>           
+        </section>
 
         <footer>
             <div class="footer-container">

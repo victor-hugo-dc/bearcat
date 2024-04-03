@@ -103,6 +103,11 @@ section {
     margin-bottom: 5em;
 }
 
+#bearcathat-section {
+    background: var(--section);
+    padding: 5em;
+}
+
 #cashtag {
     display: inline-block;
     position: relative;
@@ -332,6 +337,10 @@ a {
     #dextools-widget {
         width: auto;
     }
+
+    #bearcathat-section, #hat-image-container {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 769px) {
@@ -339,4 +348,54 @@ a {
         width: 50em;
         height: 25em;
     }
+}
+
+#hat-image-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.face-box {
+    border: 2px solid red; /* Change border style as needed */
+    box-sizing: border-box;
+    pointer-events: none; /* Ensure box doesn't interfere with clicks */
+}
+
+img {
+    max-width: 100%;
+}
+
+.image-input {
+  position: relative;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+}
+
+.custom-file-upload {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 2px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.custom-file-upload:hover {
+  background-color: #e9ecef;
+}
+
+#image-upload {
+  display: none;
 }
